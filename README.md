@@ -257,15 +257,15 @@
 
 - 글자로 된 문단 작성 시 활용
 
-### 3.3.7. <br /> 태그
+### 3.3.7. `<br />` 태그
 
 - 한 줄 내림
 
-### 3.3.8. <b></b> 태그
+### 3.3.8. `<b></b>` 태그
 
 - 글자를 굵게 표현함.
 
-### 3.3.9. <section></section> 태그
+### 3.3.9. `<section></section>` 태그
 
 - 시멘틱 태그로서 내용 구역 구분
 
@@ -644,6 +644,24 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+```
+
+## 4.11. Gradient 온라인 도구
+
+- https://cssgradient.io/
+
+## 4.12. 두줄 말 줄임 코드 (... 처리)
+
+```css
+대상 {
+  /* 2줄 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 ```
 
