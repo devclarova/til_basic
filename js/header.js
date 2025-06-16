@@ -23,6 +23,9 @@ window.addEventListener("DOMContentLoaded", function () {
   console.log(mainMenuA);
   console.log(memberMenuA);
 
+  // 모바일 메뉴 참조
+  const mobileHeader = document.querySelector(".mobile_header");
+
   // 웹브라우저의 스크롤을 체크하겠다.
   window.addEventListener("scroll", function () {
     // 스크롤바의 최상단
@@ -40,6 +43,9 @@ window.addEventListener("DOMContentLoaded", function () {
       mainMenuA.forEach(function (item) {
         item.classList.add("height_62");
       });
+
+      mobileHeader.classList.add("mobile_scroll_line");
+
       // 회원메뉴 class 추가
       memberMenuA.forEach(function (item) {
         item.classList.add("height_62");
@@ -58,6 +64,8 @@ window.addEventListener("DOMContentLoaded", function () {
       memberMenuA.forEach(function (item) {
         item.classList.remove("height_62");
       });
+
+      mobileHeader.classList.remove("mobile_scroll_line");
     }
   });
 });

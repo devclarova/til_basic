@@ -15,6 +15,7 @@
   display: block;
   width: 100%;
 }
+
 .title {
   font-size: 28px;
   font-weight: 600;
@@ -27,7 +28,9 @@
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
+  white-space: nowrap;
 }
+
 .tour_top_category {
   display: flex;
   justify-content: center;
@@ -47,7 +50,10 @@
   background-color: #fff;
   cursor: pointer;
   border-radius: 22px;
+  
+  white-space: nowrap;
 }
+
 .tour_button_list li button:active {
   opacity: 0.65;
 }
@@ -74,7 +80,6 @@
 .tour_item {
   display: block;
   overflow: hidden;
-  height: 365px;
   border-radius: 12px;
 }
 
@@ -106,19 +111,20 @@
   transform: translateY(-50%);
   border-radius: 4px;
 }
+
 .tour_item_info .tour_sale {
   font-size: 15px;
   font-weight: 400;
   color: rgb(65, 84, 255);
 }
 
-/* 한줄 말줄임 ...은 css 작업합니다. */
+/* 한줄 말줄임 ... 은 css 작업합니다. */
 .tour_item_info .tour_item_title {
+  /* 아래는 보관해 두세요. */
+  overflow: hidden;
   font-size: 15px;
   font-weight: 400;
   color: #333;
-  /* 아래는 보관해주세요. */
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -146,7 +152,6 @@
   transform: translateY(-50%) translateX(-50%);
   border-radius: 24px;
 }
-
 .tour_slide_prev img {
   transform: rotate(180deg);
 }
@@ -187,6 +192,7 @@
   color: #333;
   border-radius: 23px;
 }
+
 .swiper-button-disabled {
   display: none !important;
 }
@@ -195,8 +201,79 @@
 @media all and (max-width: 1280px) {
 }
 @media all and (max-width: 1024px) {
-  .tour_slide_wrap {
-    width: 1024px;
+  .tour {
+    border-top: 8px solid #f0f4f4;
+  }
+  .layout {
+    max-width: 760px;
+    padding: 0px 20px;
+    overflow: hidden;
+  }
+  .tour_top {
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
+
+  .tour_top_title .title {
+    font-size: 20px;
+  }
+  .tour_top_title .subtitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .tour_button_list li button {
+    height: 38px;
+  }
+
+  /* swiper 소스 고친 트릭 */
+  .sw_tour {
+    overflow: visible !important;
+  }
+
+  .sw_tour .swiper-wrapper {
+  }
+
+  /* swiper 트릭 강제로 slide 너비를 고정 시킴 */
+  .sw_tour .swiper-slide {
+    width: 230px !important;
+  }
+  .tour_item {
+  }
+  .tour_item_image {
+    height: 138px;
+  }
+  .tour_item_info {
+    height: calc(100% - 138px);
+    padding: 10px;
+  }
+  .tour_item_info .tour_city {
+    font-size: 10px;
+  }
+  .tour_item_info .tour_sale {
+    font-size: 13px;
+    padding-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tour_item_info .tour_price {
+    font-size: 14px;
+  }
+  .tour_item_info .tour_price b {
+    font-size: 15px;
+  }
+  .tour_more {
+    padding-bottom: 20px;
+  }
+  .tour_more_bt {
+    width: 100%;
+    border-radius: 4px;
+    justify-content: center;
+  }
+  .tour_slide_next,
+  .tour_slide_prev {
+    display: none;
   }
 }
 @media all and (max-width: 960px) {

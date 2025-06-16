@@ -1,59 +1,64 @@
 .ticket {
-  padding-top: 30px;
+  padding-top: 60px;
   position: relative;
 }
 .layout {
+  position: relative;
 }
 .ticket_header {
+  padding-bottom: 20px;
   position: relative;
 }
 .ticket_header_title {
   display: flex;
+  gap: 10px;
+  align-items: center;
   justify-content: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: #000;
 }
+
 .ticket_header_text {
-  margin-bottom: 20px;
+  padding-top: 15px;
   font-size: 18px;
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
   text-align: center;
 }
+
 .ticket_header_category {
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin-bottom: 25px;
 }
+
 .ticket_button_list {
   display: flex;
-  gap: 6px;
+  justify-content: center;
+  gap: 5px;
 }
 .ticket_button_list li {
 }
 .ticket_button_list li button {
-  padding: 0 20px;
-  border: 1px solid #e5e5e5;
   height: 44px;
-  background-color: #fff;
   border-radius: 22px;
+  padding: 0 20px;
+
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
   color: #111;
   font-size: 14px;
   font-weight: 500;
+
   cursor: pointer;
 }
-.ticket_button_list li button:active {
-  opacity: 0.65;
-}
+
 .ticket_focus {
   background-color: #333 !important;
-  font-weight: 600 !important;
   color: #fff !important;
   border: 1px solid #333 !important;
+  font-weight: 600 !important;
 }
-.ticket_slide_wrap {
-  padding-top: 25px;
+
+.tour_slide_wrap {
   position: relative;
 }
 .ticket_slide {
@@ -63,10 +68,8 @@
 .ticket_slide_item {
   display: block;
   width: 100%;
-  height: 550px;
   border-radius: 11px;
 }
-
 .ticket_image {
   position: relative;
   max-height: 400px;
@@ -84,6 +87,7 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)),
     linear-gradient(180deg, transparent 68.5%, rgba(0, 0, 0, 0.6));
 }
+
 .ticket_image img {
   width: 100%;
   height: 100%;
@@ -123,6 +127,7 @@
   color: #666;
   font-weight: 400;
   padding: 2px 0;
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -171,9 +176,11 @@
   transform: translateX(-50%) translateY(-50%);
   border-radius: 24px;
 }
+
 .ticket_slide_prev img {
   transform: rotate(180deg);
 }
+
 .ticket_slide_next {
   display: flex;
   align-items: center;
@@ -196,16 +203,20 @@
   justify-content: center;
   padding-top: 20px;
   position: relative;
+  margin-bottom: 70px;
 }
 .ticket_more_bt {
   display: flex;
   gap: 7px;
   align-items: center;
   justify-content: center;
-  padding: 0 40px;
+  padding: 0px 40px;
+
   border: 1px solid #e5e5e5;
+
   height: 56px;
   background-color: #fff;
+
   font-size: 16px;
   font-weight: 700;
   color: #333;
@@ -218,6 +229,48 @@
 @media all and (max-width: 1080px) {
 }
 @media all and (max-width: 1024px) {
+  .ticket {
+    padding-top: 20px;
+    border-top: 8px solid #f0f4f4;
+  }
+  .ticket_header {
+    padding-bottom: 15px;
+  }
+  .ticket_header_title {
+    font-size: 20px;
+  }
+  .ticket_header_text {
+    padding-top: 0;
+    font-size: 15px;
+  }
+  .ticket_header_category {
+    margin-bottom: 20px;
+    white-space: nowrap;
+  }
+
+  .ticket_category_list li button {
+    height: 34px;
+  }
+  .ticket_info {
+    padding: 10px;
+  }
+  .ticket_item_title {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .ticket_more_bt {
+    width: 100%;
+    border-radius: 4px;
+    height: 48px;
+  }
+  .ticket_footer {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+  .ticket_slide_prev,
+  .ticket_slide_next {
+    display: none;
+  }
 }
 @media all and (max-width: 960px) {
 }
