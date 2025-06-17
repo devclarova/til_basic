@@ -2,6 +2,7 @@ window.addEventListener("load", function () {
   // API 데이터
   const liveApiData = [
     {
+      uid: 1,
       링크: "#",
       이미지:
         "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
@@ -14,6 +15,7 @@ window.addEventListener("load", function () {
       상세설명: "휘닉스 리조트 평창",
     },
     {
+      uid: 1,
       링크: "#",
       이미지:
         "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
@@ -26,6 +28,7 @@ window.addEventListener("load", function () {
       상세설명: "휘닉스 리조트 평창",
     },
     {
+      uid: 2,
       링크: "#",
       이미지:
         "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
@@ -38,6 +41,7 @@ window.addEventListener("load", function () {
       상세설명: "휘닉스 리조트 평창",
     },
     {
+      uid: 3,
       링크: "#",
       이미지:
         "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
@@ -50,6 +54,7 @@ window.addEventListener("load", function () {
       상세설명: "휘닉스 리조트 평창",
     },
     {
+      uid: 4,
       링크: "#",
       이미지:
         "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
@@ -62,6 +67,98 @@ window.addEventListener("load", function () {
       상세설명: "휘닉스 리조트 평창",
     },
     {
+      uid: 5,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 6,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 7,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 8,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 9,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 10,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 11,
+      링크: "#",
+      이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상태: "방송예정",
+      제목: "[휘닉스 브랜드 호텔&리조트] 여름맞이 평창&제주 특가",
+      날짜: "06월 17일 (화)",
+      시간: "19:00",
+      상세이미지:
+        "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
+      상세설명: "휘닉스 리조트 평창",
+    },
+    {
+      uid: 12,
       링크: "#",
       이미지:
         "https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740638604/domstay/d519fa2509854812.jpg",
@@ -111,7 +208,7 @@ window.addEventListener("load", function () {
                             />
                           </div>
                           <p class="live_detail_title">
-                            [기획전] 푸꾸옥 자유여행 혜택 보기
+                            ${liveApiData[i].상세정보}
                           </p>
                         </div>
                       </div>
