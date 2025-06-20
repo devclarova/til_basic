@@ -16,6 +16,7 @@
   max-width: 800px;
   min-width: 400px;
 
+  height: 600px;
   min-height: 400px;
   background-color: #fff;
   border-radius: 10px;
@@ -28,11 +29,16 @@
 .popup_text {
   width: 100%;
   text-align: center;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
+}
+.popup_text p {
+  font-size: 17px;
+  font-weight: 700;
 }
 .popup_close {
   cursor: pointer;
-  background-color: #fff;
-  border: 1px solid #f0f0f0;
+  background-color: #f8f8f8;
+  border: 1px solid #8689a4;
   border-radius: 5px;
+  padding: 5px 15px;
 }
