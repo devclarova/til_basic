@@ -1,22 +1,23 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", (): void => {
   // 버튼 클릭 시 내용 보이고 숨기기 토글 (반복)
-  let isOpen = false; // true
+  let isOpen: boolean = false; // true
   // 아이디 요소를 보관
-  const mbBt = document.querySelector("#mb_bt");
+  const mbBt: Element | null = document.querySelector("#mb_bt");
   // 보이고 숨겨지는 대상
-  const hideTarget = document.querySelectorAll(".mb_footer_hide");
+  const hideTarget: NodeListOf<Element> =
+    document.querySelectorAll(".mb_footer_hide");
   // 아이콘 이미지
-  const arrowImg = document.querySelector("#mb_bt img");
+  const arrowImg: Element | null = document.querySelector("#mb_bt img");
 
   // 버튼 클릭 확인 코드
-  mbBt.addEventListener("click", () => {
+  mbBt!.addEventListener("click", (): void => {
     isOpen = !isOpen;
     showHideMenu();
   });
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("resize", (): void => {
     // 웹브라우저 너비가 1024보다 큰지 작은지
-    const winW = window.outerWidth;
+    const winW: number = window.outerWidth;
     if (winW >= 1024) {
       isOpen = false;
       showHideMenu();
@@ -27,13 +28,13 @@ window.addEventListener("DOMContentLoaded", () => {
   function showHideMenu() {
     if (isOpen) {
       // 펼치기
-      arrowImg.classList.add("img_up");
+      arrowImg!.classList.add("img_up");
       for (let item of hideTarget) {
         item.classList.add("mb_footer_show");
       }
     } else {
       // 닫기
-      arrowImg.classList.remove("img_up");
+      arrowImg!.classList.remove("img_up");
       for (let item of hideTarget) {
         item.classList.remove("mb_footer_show");
       }

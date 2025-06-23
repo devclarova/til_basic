@@ -1,8 +1,6 @@
-console.log("header.js 코드 실행");
-
 // html의 태그구조를 모두 읽어들였다면 그 때 찾아라.
 // 아래 구문 외워야 하나요?
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", (): void => {
   //   상단 영역
   const headerTop: Element | null = document.querySelector(".header_top");
 
@@ -16,9 +14,11 @@ window.addEventListener("DOMContentLoaded", function () {
   const linkSite: Element | null = document.querySelector(".link_site");
 
   // 메인메뉴 a 태그들 : 여러 개
-  const mainMenuA: NodeListOf<Element> = document.querySelectorAll(".main_menu li a");
+  const mainMenuA: NodeListOf<Element> =
+    document.querySelectorAll(".main_menu li a");
   // 멤버메뉴 a 태그들 : 여러 개
-  const memberMenuA: NodeListOf<Element> = document.querySelectorAll(".member_menu li a");
+  const memberMenuA: NodeListOf<Element> =
+    document.querySelectorAll(".member_menu li a");
 
   console.log(mainMenuA);
   console.log(memberMenuA);
@@ -27,11 +27,11 @@ window.addEventListener("DOMContentLoaded", function () {
   const mobileHeader: Element | null = document.querySelector(".mobile_header");
 
   // 웹브라우저의 스크롤을 체크하겠다.
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", (): void => {
     // 스크롤바의 최상단
     const scY = window.scrollY;
     if (scY > 0) {
-    //   console.log("스크롤되었다.");
+      //   console.log("스크롤되었다.");
       headerTop?.classList.add("header_top_scroll");
       logo?.classList.add("logo_hide");
       sale?.classList.add("sale_hide");
@@ -40,28 +40,28 @@ window.addEventListener("DOMContentLoaded", function () {
 
       linkSite?.classList.add("link_site_hide");
       // 메인메뉴 class 추가
-      mainMenuA.forEach(function (item) {
+      mainMenuA.forEach((item: Element): void => {
         item.classList.add("height_62");
       });
 
       mobileHeader?.classList.add("mobile_scroll_line");
 
       // 회원메뉴 class 추가
-      memberMenuA.forEach(function (item) {
+      memberMenuA.forEach((item: Element): void => {
         item.classList.add("height_62");
       });
     } else {
-    //   console.log("스크롤 최상단!!!");
+      //   console.log("스크롤 최상단!!!");
       headerTop?.classList.remove("header_top_scroll");
       logo?.classList.remove("logo_hide");
       sale?.classList.remove("sale_hide");
       search?.classList.remove("search_scroll");
       linkSite?.classList.remove("link_site_hide");
 
-      mainMenuA.forEach(function (item) {
+      mainMenuA.forEach((item: Element): void => {
         item.classList.remove("height_62");
       });
-      memberMenuA.forEach(function (item) {
+      memberMenuA.forEach((item: Element): void => {
         item.classList.remove("height_62");
       });
 
