@@ -1051,7 +1051,8 @@ navigation: {
 ## 7.4. 기초 문법
 
 - 참조: https://www.heropy.dev/p/Y7OrPe
-- 중첩(Nesting)
+
+### 7.4.1. 중첩(Nesting)
 
 ```scss
 // 중첩 (Nesting)
@@ -1120,5 +1121,130 @@ navigation: {
 }
 .card .content button:hover {
   background-color: red;
-}/*# sourceMappingURL=test.css.map */
+} /*# sourceMappingURL=test.css.map */
+```
+
+### 7.4.2. 변수
+
+```scss
+// 변수 만들기
+$width-screen: 960px;
+$pc-w: 760px;
+
+.wrap {
+  position: relative;
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    // 변수사용하기
+    width: $width-screen;
+    .inner {
+      // 변수사용하기
+      width: $pc-w;
+    }
+  }
+  .main {
+    // 변수사용하기
+    width: $width-screen;
+  }
+  .footer {
+    // 변수사용하기
+    width: $width-screen;
+  }
+}
+```
+
+### 7.4.3. 변수를 모으고 다른 scss에서 사용하기
+
+- css로 생성할 필요가 없는 경우 `_파일명.scss` 생성
+- scss 폴더에 `_val.scss` 파일 만들기(파일명은 자유)
+
+```scss
+$width-screen: 960px;
+$pc-w: 760px;
+```
+
+- 변수 사용 시 `@import "val";` `_` 반드시 제거하고 파일명만 작성
+
+```scss
+@import "val";
+
+.wrap {
+  position: relative;
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    // 변수사용하기
+    width: $width-screen;
+    .inner {
+      // 변수사용하기
+      width: $pc-w;
+    }
+  }
+  .main {
+    // 변수사용하기
+    width: $width-screen;
+  }
+  .footer {
+    // 변수사용하기
+    width: $width-screen;
+  }
+}
+```
+
+### 7.4.4. 함수(Mixins) 사용하기
+
+- 파일명을 `_`를 활용하자 (`scss/_mixins.scss`)
+
+```scss
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin border-fn($cc) {
+  border: 5px solid $cc;
+}
+```
+
+- 아래처럼 불러들임
+
+```scss
+@import "val";
+@import "mixins";
+```
+
+```scss
+@import "val";
+@import "mixins";
+
+.wrap {
+  position: relative;
+  // mixin 사용
+  @include flex-center;
+
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    // mixin 사용
+    @include flex-center;
+    // 변수사용하기
+    width: $width-screen;
+    .inner {
+      @include border-fn(red);
+      height: 100px;
+      // 변수사용하기
+      width: $pc-w;
+    }
+  }
+  .main {
+    @include border-fn(#ffffff);
+    // 변수사용하기
+    width: $width-screen;
+  }
+  .footer {
+    // 변수사용하기
+    width: $width-screen;
+  }
+}
 ```
