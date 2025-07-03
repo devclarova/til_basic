@@ -20,8 +20,8 @@ window.addEventListener("DOMContentLoaded", (): void => {
   const memberMenuA: NodeListOf<Element> =
     document.querySelectorAll(".member_menu li a");
 
-  console.log(mainMenuA);
-  console.log(memberMenuA);
+  // console.log(mainMenuA);
+  // console.log(memberMenuA);
 
   // 모바일 메뉴 참조
   const mobileHeader: Element | null = document.querySelector(".mobile_header");

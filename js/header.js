@@ -18,8 +18,8 @@ window.addEventListener("DOMContentLoaded", () => {
   // 멤버메뉴 a 태그들 : 여러 개
   const memberMenuA = document.querySelectorAll(".member_menu li a");
 
-  console.log(mainMenuA);
-  console.log(memberMenuA);
+  // console.log(mainMenuA);
+  // console.log(memberMenuA);
 
   // 모바일 메뉴 참조
   const mobileHeader = document.querySelector(".mobile_header");
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", () => {
     // 스크롤바의 최상단
     const scY = window.scrollY;
     if (scY > 0) {
-      console.log("스크롤되었다.");
+      // console.log("스크롤되었다.");
       headerTop.classList.add("header_top_scroll");
       logo.classList.add("logo_hide");
       sale.classList.add("sale_hide");
@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
         item.classList.add("height_62");
       });
     } else {
-      console.log("스크롤 최상단!!!");
+      // console.log("스크롤 최상단!!!");
       headerTop.classList.remove("header_top_scroll");
       logo.classList.remove("logo_hide");
       sale.classList.remove("sale_hide");
